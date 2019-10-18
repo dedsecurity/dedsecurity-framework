@@ -1,4 +1,4 @@
 #!/bin/bash
 
-echo "Informe a porta que quer deixar na escuta: "; read p
+echo "port: "; read p
 nc -lvp "$p"
