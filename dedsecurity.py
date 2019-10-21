@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import socket
 import whois
 
@@ -6,9 +7,7 @@ def whois():
     w = whois.whois(data)
     print (w)
 
-ENDC = '\033[0m'
 BLUE = '\033[94m'
-RED = '\033[1;31M'
 
 banner = BLUE+"""
        __         __                             _ __
@@ -17,21 +16,17 @@ banner = BLUE+"""
 / /_/ /  __/ /_/ /  (__  )  __/ /__/ /_/ / /  / / /_/ /_/ /
 \__,_/\___/\__,_/  /____/\___/\___/\__,_/_/  /_/\__/\__, /
                                                    /____/
-:===:simon kinjo
-:===:ded security
+:===:Simon kinjo
+:===:DEDSECURITY    
 commands:
-1 = whois
-2 = reverse shell
-3 = getsub
-"""+ENDC
+type it 1 = whois
+type it 2 = reverse shell
+type it 3 = getsub
+"""
 print (banner)
 
 option = input("dedsecurity> ")
 if option==1:
 	whois()
 elif option==2:
-	  Ceturn_code = subprocess.call("./serve.sh", shell=True)
-elif option==3:
-	  turn_code = subprocess.call("./pegarsub.sh", shell=True)
-elif option==4:
-     portscanner() 
+	  turn_code = subprocess.call("./pegarsub.sh", shell=True) 
