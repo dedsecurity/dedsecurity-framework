@@ -19,9 +19,9 @@ banner = BLUE+"""
 :===:Simon kinjo
 :===:DEDSECURITY    
 commands:
-type it 1 = whois
-type it 2 = reverse shell
-type it 3 = getsub
+Enter 1 to run whois
+Enter 2 to run Reverse shell
+Enter 3 to run getsub
 """
 print (banner)
 
@@ -29,4 +29,4 @@ option = input("dedsecurity> ")
 if option==1:
 	whois()
 elif option==2:
-	  turn_code = subprocess.call("./pegarsub.sh", shell=True) 
+	  turn_code = subprocess.call("./getsub.sh", shell=True) 
