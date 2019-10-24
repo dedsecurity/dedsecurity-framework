@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 import socket
 import whois
@@ -18,15 +19,16 @@ banner = BLUE+"""
                                                    /____/
 :===:Simon kinjo
 :===:DEDSECURITY    
-commands:
 Enter 1 to run whois
 Enter 2 to run Reverse shell
 Enter 3 to run getsub
 """
-print (banner)
+print(banner)
 
 option = input("dedsecurity> ")
 if option==1:
 	whois()
 elif option==2:
+      return_code = subprocess.call("./serve.sh", shell=True)
+elif option==3:
 	  turn_code = subprocess.call("./getsub.sh", shell=True) 
