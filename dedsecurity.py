@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 import socket
 import whois
@@ -19,9 +18,9 @@ banner = BLUE+"""
                                                    /____/
 :===:Simon kinjo
 :===:DEDSECURITY    
-Enter 1 to run whois
+Enter 1 to run Whois
 Enter 2 to run Reverse shell
-Enter 3 to run getsub
+Enter 3 to run Getsub
 """
 print(banner)
 
