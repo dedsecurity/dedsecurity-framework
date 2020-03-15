@@ -15,13 +15,9 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the lib
 ```bash
 pip install -r requirements.txt
 ```
+ ## Usage
+ ```bash
+ $ ./dedsecurity.py
 
-# --------------------------------------------- #
-
-  
-## HOW TO USE IT?
-## $ ./dedsecurity.py
-     
-## Tested on:
-##      Python 3.7.5
-# -------------------------------------------- #
+## License
+[APACHE]http://www.apache.org/licenses/
