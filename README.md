@@ -10,7 +10,7 @@ Dedsecurity-framework is a toolkit written in python and shell script.
 
 ## Installation
 
-Use the package manager pip to install the libraries.
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the libraries.
 
 ```bash
 pip install -r requirements.txt
