@@ -1,8 +1,14 @@
 # dedsecurity-framework
 
-## #!/usr/bin/env python or bash
+Dedsecurity-framework is a toolkit written in python and shell script.
 
-## tool kit - backdoor-portscanner-exploit
+## Installation
+
+Use the package manager pip to install the libraries.
+
+```bash
+pip install -r requirements.txt
+```
 
 ### Website:  https://dedsecurity.com
 ### Author:   Simon Kinjo
