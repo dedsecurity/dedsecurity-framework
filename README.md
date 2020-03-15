@@ -9,11 +9,11 @@ Use the package manager pip to install the libraries.
 ```bash
 pip install -r requirements.txt
 ```
-
+```bash
 ### Website:  https://dedsecurity.com
 ### Author:   Simon Kinjo
 ### Maintenance:  Simon Kinjo
-
+```
 # --------------------------------------------- #
 
 ## CONFIGURATION?
