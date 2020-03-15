@@ -1,22 +1,22 @@
-## dedsecurity-framework
+# dedsecurity-framework
 
-# #!/usr/bin/env python or bash
+## #!/usr/bin/env python or bash
 
-# tool kit - backdoor-portscanner-exploit
+## tool kit - backdoor-portscanner-exploit
 
-# Website:  https://dedsecurity.com
-# Author:   Simon Kinjo
-# Maintenance:  Simon Kinjo
+### Website:  https://dedsecurity.com
+### Author:   Simon Kinjo
+### Maintenance:  Simon Kinjo
 
 # --------------------------------------------- #
 
-# CONFIGURATION?
+## CONFIGURATION?
   pip install -r requirements.txt
   
-# HOW TO USE IT?
-# $ ./dedsecurity.py
+## HOW TO USE IT?
+## $ ./dedsecurity.py
      
-# Tested on:
-#      Python 3.7.5
+## Tested on:
+##      Python 3.7.5
 #
 # -------------------------------------------- #
