@@ -17,7 +17,6 @@ pip install -r requirements.txt
 ```
  ## Usage
  ```bash
- $ 
  $ ./dedsecurity.py
 ```
 ## Contributing
