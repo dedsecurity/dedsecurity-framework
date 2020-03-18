@@ -1,11 +1,4 @@
-#!/usr/bin/python3
-import socket
-import whois
-
-def whois():
-    data = input("Enter a domain: ")
-    w = whois.whois(data)
-    print (w)
+#!/usr/bin/env python
 
 BLUE = '\033[94m'
 
