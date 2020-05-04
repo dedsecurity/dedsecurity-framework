@@ -1,5 +1,5 @@
 # dedsecurity-framework
-<h4 align="center"><img src="https://github.com/simdok/dedsecurity-framework/logo.png" width="300px" height="300px">
+<h4 align="center"><img src="https://github.com/simdok/dedsecurity-framework/logo.png" width="100px" height="100px">
 
 Dedsecurity-framework is a toolkit written in python and shell script.
 
