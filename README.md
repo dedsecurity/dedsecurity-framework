@@ -1,5 +1,13 @@
 # Dedsecurity-Framework
 
+</a>
+<h4 align="center">Details</h4>                
+<p align="center">
+  </a>
+  <a href="https://www.python.org/">
+    <img src="https://img.shields.io/badge/language-python-blue.svg">
+ </a>
+
 Dedsecurity-framework is a toolkit written in python and shell script.
 
 ```bash
