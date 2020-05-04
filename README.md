@@ -1,4 +1,5 @@
 # dedsecurity-framework
+<h4 align="center"><img src="https://raw.githubusercontent.com/3xploit-db/Pentest-Tools-Framework/master/core/logo/logo.jpg" width="300px" height="300px">
 
 Dedsecurity-framework is a toolkit written in python and shell script.
 
