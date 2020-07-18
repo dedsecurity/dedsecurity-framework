@@ -6,8 +6,8 @@
   </a>
   <a href="https://www.python.org/">
     <img src="https://img.shields.io/badge/language-python-blue.svg">
-    <img src="https://img.shields.io/badge/language-shell-green.svg">
  </a>
+ <a <img src="https://img.shields.io/badge/language-shell-green.svg">/a>
 
 Dedsecurity-framework is a toolkit written in python and shell script.
 
