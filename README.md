@@ -33,6 +33,14 @@ Banner-grabbing is a technique used to gain information about a computer system 
 Exploit-Buffer Overflow
 
 Backdoor for Windows
+
+Brute-Force FTP
+
+DDOS
+
+Shell for Server
+
+wifi.py is a software that obtains the wifi passwords saved on the computer
 ```
 
 ## Contributing
