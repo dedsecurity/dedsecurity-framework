@@ -1,6 +1,6 @@
 # Dedsecurity-Framework
 
-Dedsecurity-framework is a toolkit written in python and shell script.
+Dedsecurity-framework is a toolkit written in python.
 
 ```bash
 Website:  https://dedsecurity.com
