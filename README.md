@@ -7,7 +7,7 @@ Dedsecurity-framework is a toolkit written in python.
 <p align="center">
   </a>
   <a href="https://www.python.org/">
-    <img src="https://img.shields.io/badge/language-python-blue.svg">
+    <img src="https://img.shields.io/badge/Language-Python-blue.svg">
  </a>
 
 ```bash
