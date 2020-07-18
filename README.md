@@ -1,6 +1,6 @@
 # Dedsecurity-Framework
 
-Dedsecurity-framework is a toolkit written in python.
+Dedsecurity-Framework is a Toolkit Written in Python.
 
 </a>
 <h4 align="center">Details</h4>                
