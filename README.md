@@ -46,4 +46,4 @@ wifi.py is a software that obtains the wifi passwords saved on the computer
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 ## License
-[APACHE](http://www.apache.org/licenses/)
+[MIT](https://opensource.org/licenses/MIT)
