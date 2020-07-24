@@ -25,23 +25,23 @@ pip install -r requirements.txt
 ```
 
 ## Tools
-```bash
-Port-scanner
 
-Banner-grabbing is a technique used to gain information about a computer system on a network and the services running on its open ports. Administrators can use this to take inventory of the systems and services on their network.
+- Port-scanner
 
-Exploit-Buffer Overflow
+- Banner-grabbing is a technique used to gain information about a computer system on a network and the services running on its open ports. Administrators can use this to take     inventory of the systems and services on their network.
 
-Backdoor for Windows
+- Exploit-Buffer Overflow
 
-Brute-Force FTP
+- Backdoor for Windows
 
-DDOS
+- Brute-Force FTP
 
-Shell for Server
+- DDOS
 
-wifi.py is a software that obtains the wifi passwords saved on the computer
-```
+- Shell for Server
+
+- wifi.py is a software that obtains the wifi passwords saved on the computer
+
 
 ## Contributing
 Feel free to submitting pull requests to us.
