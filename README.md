@@ -2,14 +2,6 @@
 
 ## Dedsecurity-Framework is a Toolkit Written in Python.
 
-</a>
-<h4 align="center">Details</h4>                
-<p align="center">
-  </a>
-  <a href="https://www.python.org/">
-    <img src="https://img.shields.io/badge/Language-Python-blue.svg">
- </a>
-
 ```bash
 Website:  https://dedsecurity.com
 Author:   Simon Kinjo
