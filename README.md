@@ -1,7 +1,4 @@
-<h1 align="center"><img src="./public/logosemfundo.png"> </h1>
-<div align="center">
-  <h1>Dedsecurity-Framework</h1>
-</div>
+<h1 align="center"><img src="./public/logosemfundo.png">Dedsecurity-Framework </h1>
 
 ## Dedsecurity-Framework is a Toolkit.
 
