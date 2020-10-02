@@ -28,8 +28,6 @@ pip install -r requirements.txt
 
 - Brute-Force FTP
 
-- DDOS
-
 - Shell for Server
 
 - wifi.py is a software that obtains the wifi passwords saved on the computer
