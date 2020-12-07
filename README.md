@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 - Exploit-Buffer Overflow
 
-- Remote acess for Windows
+- Remote access for Windows
 
 - Remote acess for Linux
 
