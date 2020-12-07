@@ -28,6 +28,8 @@ pip install -r requirements.txt
 
 - Remote acess for Windows
 
+- Remote acess for Linux
+
 - Brute-Force FTP
 
 - Shell for Server
