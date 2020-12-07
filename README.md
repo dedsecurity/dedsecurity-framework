@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 - Exploit-Buffer Overflow
 
-- Backdoor for Windows
+- Remote acess for Windows
 
 - Brute-Force FTP
 
