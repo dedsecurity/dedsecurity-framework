@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 - Remote access for Windows
 
-- Remote acess for Linux
+- Remote access for Linux
 
 - Brute-Force FTP
 
