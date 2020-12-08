@@ -39,8 +39,7 @@ pip install -r requirements.txt
 - wifi.py is a software that obtains the wifi passwords saved on the computer
 
 # Usage remote access
-run the remotelinux.py or remotewindows.py
-and run on terminal 
+run remotelinux.py or remotewindows.py and then run in the terminal
 
 ```bash
 nc -l -p 888 -v
