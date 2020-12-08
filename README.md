@@ -34,6 +34,8 @@ pip install -r requirements.txt
 
 - Shell for Server
 
+- Curl
+
 - wifi.py is a software that obtains the wifi passwords saved on the computer
 
 # Usage remote access
@@ -45,6 +47,13 @@ nc -l -p 888 -v
 ```
 
 you have to install the netcat
+
+# Use curl
+
+```bash
+deno run --allow-net curl.ts https://google.com
+```
+ou have to install the deno
 
 ## Contributing
 Feel free to submitting pull requests to us.
