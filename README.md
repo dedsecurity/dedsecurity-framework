@@ -53,7 +53,7 @@ you have to install the netcat
 ```bash
 deno run --allow-net curl.ts https://google.com
 ```
-ou have to install the deno
+you have to install the deno
 
 ## Contributing
 Feel free to submitting pull requests to us.
