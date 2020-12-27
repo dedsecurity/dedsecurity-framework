@@ -38,6 +38,8 @@ pip install -r requirements.txt
 
 - wifi.py is a software that obtains the wifi passwords saved on the computer
 
+- cat.js shows the contents of the file
+
 # Usage remote access
 run remotelinux.py or remotewindows.py and then run in the terminal
 
@@ -53,6 +55,11 @@ you have to install the netcat
 deno run --allow-net curl.ts https://google.com
 ```
 you have to install the deno
+
+# Usage cat
+```bash
+deno run --allow-read cat.js test.txt
+```
 
 ## Contributing
 Feel free to submitting pull requests to us.
