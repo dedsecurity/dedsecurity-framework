@@ -58,7 +58,7 @@ you have to install the deno
 
 # Usage cat
 ```bash
-deno run --allow-read cat.js test.txt
+deno run --allow-read cat.ts test.txt
 ```
 
 ## Contributing
