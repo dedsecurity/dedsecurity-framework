@@ -40,6 +40,8 @@ pip install -r requirements.txt
 
 - cat.js shows the contents of the file
 
+- speciport.py shows specific ports
+
 # Usage remote access
 run remotelinux.py or remotewindows.py and then run in the terminal
 
@@ -57,9 +59,17 @@ deno run --allow-net curl.ts https://google.com
 you have to install the deno
 
 # Usage cat
+
 ```bash
 deno run --allow-read cat.ts test.txt
 ```
+
+# Using specific port
+
+```bash
+python speciport.py dedsecurity.com
+```
+
 
 ## Contributing
 Feel free to submitting pull requests to us.
