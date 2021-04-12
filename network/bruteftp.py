@@ -5,7 +5,7 @@ import re
 import sys
 
 if len(sys.argv) < 2:
-    print("Use python lonftp.py 127.0.0.1 usuario")
+    print("Use python bruteftp.py 127.0.0.1 user")
     sys.exit(0)
 
 usuario = sys.argv[2]
