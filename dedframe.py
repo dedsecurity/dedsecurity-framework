@@ -45,13 +45,13 @@ while True:
         print(info.text)
     elif i == "speciport":
         p = input("website/ip: ")
-        os.system('python speciport.py '+p)
+        os.system('python speciport.py '+p)# if you use Linux, switch to python3
     elif i == "curl":
         c = input("website[example:https://google.com]: ")
         os.system('deno run --allow-net curl.ts '+c)
     elif i == "banner":
-        os.system('python banner_grabbing.py')
+        os.system('python banner_grabbing.py')# if you use Linux, switch to python3
     elif i == "portscan":
-        os.system('python scannernmap.py')
+        os.system('python scannernmap.py')# if you use Linux, switch to python3
     elif i == "wifi":
-        os.system('python wifi.pyw')
+        os.system('python wifi.pyw')# if you use Linux, switch to python3
