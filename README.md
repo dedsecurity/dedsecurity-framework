@@ -17,6 +17,7 @@ Make sure you have installed the dependencies:
   * `python` 3
   * `git`
   * `deno`
+  * `gcc`
 
 Clone the [source] with `git`:
  ```sh
