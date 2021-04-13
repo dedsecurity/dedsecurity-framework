@@ -1,5 +1,6 @@
 import os
 import requests
+import webbrowser
 
 banner = """
  @@@@@@@  @@@@@@@@ @@@@@@@        @@@@@@ @@@@@@@@  @@@@@@@ @@@  @@@ @@@@@@@  @@@ @@@@@@@ @@@ @@@
@@ -19,11 +20,34 @@ clear - Linux
 cls - Windows 
 robots - Get robots.txt  
 speciport - Shows specific ports 
-curl
+curl - Website source code
 banner - Banner-Grabbing
 portscan - Port-Scanner 
-wifi - is a software that obtains the wifi passwords saved on the computer
+wifi - Is a software that obtains the wifi passwords saved on the computer
+subdomain - Shows the subdomains
+whois - Consult contact information and DNS about entities on the internet
 """)
+
+def subdomain():
+    domain = input("Website: ")
+
+    file = open("listsubdomain.txt")
+    content = file.read()
+    subdomains = content.splitlines()
+
+    discovered_subdomains = []
+    for subdomain in subdomains:
+        
+        url = f"http://{subdomain}.{domain}"
+        try:   
+            requests.get(url)
+        except requests.ConnectionError:
+            
+            pass
+        else:
+            
+            print("subdomain:", url)
+            discovered_subdomains.append(url)
 
 print("Type 'help' to show commands.")
 
@@ -44,10 +68,10 @@ while True:
         info = requests.get(robots)
         print(info.text)
     elif i == "speciport":
-        p = input("website/ip: ")
+        p = input("Website/ip: ")
         os.system('python speciport.py '+p)# if you use Linux, switch to python3
     elif i == "curl":
-        c = input("website[example:https://google.com]: ")
+        c = input("Website[example:https://google.com]: ")
         os.system('deno run --allow-net curl.ts '+c)
     elif i == "banner":
         os.system('python banner_grabbing.py')# if you use Linux, switch to python3
@@ -55,3 +79,10 @@ while True:
         os.system('python scannernmap.py')# if you use Linux, switch to python3
     elif i == "wifi":
         os.system('python wifi.pyw')# if you use Linux, switch to python3
+    elif i == "subdomain":
+        subdomain()
+    elif i == "whois":
+        w = input("Website:")
+        whois = 'https://api.hackertarget.com/whois/?q='+w
+        info = requests.get(whois)
+        print(info.text)
