@@ -40,6 +40,8 @@ pip install -r requirements.txt
 
 - speciport.py shows specific ports
 
+- dedframe.py is the console
+
 # Usage remote access
 run remotelinux.py or remotewindows.py and then run in the terminal
 
