@@ -32,8 +32,6 @@ pip install -r requirements.txt
 
 - Brute-Force FTP
 
-- Shell for Server
-
 - Curl
 
 - wifi.py is a software that obtains the wifi passwords saved on the computer
