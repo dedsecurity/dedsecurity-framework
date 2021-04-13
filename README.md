@@ -24,7 +24,7 @@ Clone the [source] with `git`:
    cd dedsecurity-framework
    ```
 
- [source]: https://github.com/dedsecubr/pyrust-lang
+ [source]: https://github.com/dedsecubr/dedsecurity-framework
  
  Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the libraries.
 
