@@ -31,7 +31,7 @@ geoip
 def subdomain():
     domain = input("Website: ")
 
-    file = open("listsubdomain.txt")
+    file = open("network/listsubdomain.txt")
     content = file.read()
     subdomains = content.splitlines()
 
@@ -69,16 +69,16 @@ while True:
         print(info.text)
     elif i == "speciport":
         p = input("Website/ip: ")
-        os.system('python speciport.py '+p)# if you use Linux, switch to python3
+        os.system('python network/speciport.py '+p)# if you use Linux, switch to python3
     elif i == "curl":
         c = input("Website[example:https://google.com]: ")
-        os.system('deno run --allow-net curl.ts '+c)
+        os.system('deno run --allow-net network/curl.ts '+c)
     elif i == "banner":
-        os.system('python banner_grabbing.py')# if you use Linux, switch to python3
+        os.system('python network/banner_grabbing.py')# if you use Linux, switch to python3
     elif i == "portscan":
-        os.system('python scannernmap.py')# if you use Linux, switch to python3
+        os.system('python network/scannernmap.py')# if you use Linux, switch to python3
     elif i == "wifi":
-        os.system('python wifi.pyw')# if you use Linux, switch to python3
+        os.system('python network/wifi.pyw')# if you use Linux, switch to python3
     elif i == "subdomain":
         subdomain()
     elif i == "whois":
