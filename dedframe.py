@@ -1,5 +1,6 @@
 import os
 import requests
+import platform
 
 banner = """
  @@@@@@@  @@@@@@@@ @@@@@@@        @@@@@@ @@@@@@@@  @@@@@@@ @@@  @@@ @@@@@@@  @@@ @@@@@@@ @@@ @@@
@@ -25,7 +26,9 @@ portscan - Port-Scanner
 wifi - Is a software that obtains the wifi passwords saved on the computer
 subdomain - Shows the subdomains
 whois - Consult contact information and DNS about entities on the internet
-geoip
+geoip - Is a feature that allows you to determine the geographic position of a device based on a coordinate system
+traceroute - Traceroute is a diagnostic tool that tracks a packet's route through a computer network using IP and ICMP protocols
+ping - Is a utility that uses the ICMP protocol to test connectivity between devices
 """)
 
 def subdomain():
@@ -48,6 +51,13 @@ def subdomain():
             
             print("subdomain:", url)
             discovered_subdomains.append(url)
+
+def traceroute():
+    t = input("Website/Ip: ")
+    if platform.system() == 'Linux':
+        os.system("traceroute "+t)
+    elif platform.system() == 'Windows':
+        os.system("tracert "+t)
 
 print("Type 'help' to show commands.")
 
@@ -91,3 +101,8 @@ while True:
         geoip = 'https://api.hackertarget.com/geoip/?q='+g
         info = requests.get(geoip)
         print(info.text)
+    elif i == "traceroute":
+        traceroute()
+    elif i == "ping":
+        pi = input("Website/Ip: ")
+        os.system("ping "+pi)
