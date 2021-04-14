@@ -1,6 +1,5 @@
 import os
 import requests
-import webbrowser
 
 banner = """
  @@@@@@@  @@@@@@@@ @@@@@@@        @@@@@@ @@@@@@@@  @@@@@@@ @@@  @@@ @@@@@@@  @@@ @@@@@@@ @@@ @@@
@@ -26,6 +25,7 @@ portscan - Port-Scanner
 wifi - Is a software that obtains the wifi passwords saved on the computer
 subdomain - Shows the subdomains
 whois - Consult contact information and DNS about entities on the internet
+geoip
 """)
 
 def subdomain():
@@ -85,4 +85,9 @@ while True:
         w = input("Website:")
         whois = 'https://api.hackertarget.com/whois/?q='+w
         info = requests.get(whois)
+        print(info.text)
+    elif i == "geoip":
+        g = input("Website/Ip: ")
+        geoip = 'https://api.hackertarget.com/geoip/?q='+g
+        info = requests.get(geoip)
         print(info.text)
