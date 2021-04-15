@@ -1,6 +1,8 @@
 import os
 import requests
 import platform
+import webbrowser
+import sys
 
 banner = """
  @@@@@@@  @@@@@@@@ @@@@@@@        @@@@@@ @@@@@@@@  @@@@@@@ @@@  @@@ @@@@@@@  @@@ @@@@@@@ @@@ @@@
@@ -13,6 +15,8 @@ banner = """
 
 print(banner)
 
+google_hacking = 'https://www.google.com/search?q='
+
 def help():
     print("""
 exit - To exit
@@ -23,12 +27,14 @@ speciport - Shows specific ports
 curl - Website source code
 banner - Banner-Grabbing
 portscan - Port-Scanner 
-wifi - Is a software that obtains the wifi passwords saved on the computer
+wifi - This software obtains the wifi passwords saved on the computer
 subdomain - Shows the subdomains
 whois - Consult contact information and DNS about entities on the internet
-geoip - Is a feature that allows you to determine the geographic position of a device based on a coordinate system
+geoip - Feature that allows you to determine the geographic position of a device based on a coordinate system
 traceroute - Traceroute is a diagnostic tool that tracks a packet's route through a computer network using IP and ICMP protocols
-ping - Is a utility that uses the ICMP protocol to test connectivity between devices
+ping - Utility that uses the ICMP protocol to test connectivity between devices
+google - Google Hacking
+exploitdb - Google Hacking Database
 """)
 
 def subdomain():
@@ -106,3 +112,8 @@ while True:
     elif i == "ping":
         pi = input("Website/Ip: ")
         os.system("ping "+pi)
+    elif i == "google":
+        url = input("Website: ")
+        webbrowser.open_new_tab(google_hacking + 'site:'+url)
+    elif i == "exploitdb":
+        webbrowser.open_new_tab('https://www.exploit-db.com/google-hacking-database')
