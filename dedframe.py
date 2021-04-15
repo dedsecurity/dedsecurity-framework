@@ -35,6 +35,8 @@ traceroute - Traceroute is a diagnostic tool that tracks a packet's route throug
 ping - Utility that uses the ICMP protocol to test connectivity between devices
 google - Google Hacking
 exploitdb - Google Hacking Database
+login - Pages containing login portals
+ondevice - Online devices
 """)
 
 def subdomain():
@@ -117,3 +119,8 @@ while True:
         webbrowser.open_new_tab(google_hacking + 'site:'+url)
     elif i == "exploitdb":
         webbrowser.open_new_tab('https://www.exploit-db.com/google-hacking-database')
+    elif i == "login":
+        webbrowser.open_new_tab(google_hacking + 'inurl:"/login.htm" ')
+    elif i == "ondevice":
+        on = input("Website:")
+        webbrowser.open_new_tab(google_hacking + 'site:'+on+' /tcpipv4.htm')
