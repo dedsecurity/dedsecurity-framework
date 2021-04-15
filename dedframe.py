@@ -2,7 +2,7 @@ import os
 import requests
 import platform
 import webbrowser
-import sys
+
 
 banner = """
  @@@@@@@  @@@@@@@@ @@@@@@@        @@@@@@ @@@@@@@@  @@@@@@@ @@@  @@@ @@@@@@@  @@@ @@@@@@@ @@@ @@@
