@@ -125,9 +125,7 @@ while True:
     elif i == "ondevice":
         on = input("Website:")
         webbrowser.open_new_tab(google_hacking + 'site:'+on+' /tcpipv4.htm')
-<<<<<<< HEAD
     elif i == "indexof":
         index = input("Website: ")
         webbrowser.open_new_tab(google_hacking + 'intitle: "index of" site:'+index)
-=======
->>>>>>> a804e34c440ddf39a55a17972e0a1d96718d0eb9
+
