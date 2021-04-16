@@ -88,16 +88,16 @@ while True:
         print(info.text)
     elif i == "speciport":
         p = input("Website/ip: ")
-        os.system('python network/speciport.py '+p)# if you use Linux, switch to python3
+        os.system('python network/speciport.py '+p)# if you use Linux, switch to 'python3 network/speciport.py'
     elif i == "curl":
         c = input("Website[example:https://google.com]: ")
         os.system('deno run --allow-net network/curl.ts '+c)
     elif i == "banner":
-        os.system('python network/banner_grabbing.py')# if you use Linux, switch to python3
+        os.system('python network/banner_grabbing.py')# if you use Linux, switch to 'python3 network/banner_grabbing.py'
     elif i == "portscan":
-        os.system('python network/scannernmap.py')# if you use Linux, switch to python3
+        os.system('python network/scannernmap.py')# if you use Linux, switch to 'python3 network/scannernmap.py'
     elif i == "wifi":
-        os.system('python network/wifi.pyw')# if you use Linux, switch to python3
+        os.system('python network/wifi.pyw')# if you use Linux, switch to 'python3 network/wifi.pyw'
     elif i == "subdomain":
         subdomain()
     elif i == "whois":
@@ -125,6 +125,9 @@ while True:
     elif i == "ondevice":
         on = input("Website:")
         webbrowser.open_new_tab(google_hacking + 'site:'+on+' /tcpipv4.htm')
+<<<<<<< HEAD
     elif i == "indexof":
         index = input("Website: ")
         webbrowser.open_new_tab(google_hacking + 'intitle: "index of" site:'+index)
+=======
+>>>>>>> a804e34c440ddf39a55a17972e0a1d96718d0eb9
