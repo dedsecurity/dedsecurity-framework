@@ -121,9 +121,10 @@ while True:
     elif i == "exploitdb":
         webbrowser.open_new_tab('https://www.exploit-db.com/google-hacking-database')
     elif i == "login":
-        webbrowser.open_new_tab(google_hacking + 'inurl:"/login.htm" ')
+        lo = input("Website: ")
+        webbrowser.open_new_tab(google_hacking + 'inurl:"/login.htm" site:'+lo)
     elif i == "ondevice":
-        on = input("Website:")
+        on = input("Website: ")
         webbrowser.open_new_tab(google_hacking + 'site:'+on+' /tcpipv4.htm')
     elif i == "indexof":
         index = input("Website: ")
