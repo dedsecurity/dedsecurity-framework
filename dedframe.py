@@ -37,6 +37,7 @@ google - Google Hacking
 exploitdb - Google Hacking Database
 login - Pages containing login portals
 ondevice - Online devices
+indexof - Index of a website
 """)
 
 def subdomain():
@@ -124,3 +125,6 @@ while True:
     elif i == "ondevice":
         on = input("Website:")
         webbrowser.open_new_tab(google_hacking + 'site:'+on+' /tcpipv4.htm')
+    elif i == "indexof":
+        index = input("Website: ")
+        webbrowser.open_new_tab(google_hacking + 'intitle: "index of" site:'+index)
