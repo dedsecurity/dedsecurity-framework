@@ -21,11 +21,11 @@ Make sure you have installed the dependencies:
 
 Clone the [source] with `git`:
  ```sh
-   git clone https://github.com/dedsecubr/dedsecurity-framework
+   git clone https://github.com/dedsecurity/dedsecurity-framework
    cd dedsecurity-framework
    ```
 
- [source]: https://github.com/dedsecubr/dedsecurity-framework
+ [source]: https://github.com/dedsecurity/dedsecurity-framework
  
  Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the libraries.
 
