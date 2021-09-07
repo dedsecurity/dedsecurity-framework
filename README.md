@@ -1,8 +1,8 @@
 <h1 align="center"><img src="./public/logosemfundo.png"></h1>
 
-<h1 align="center"> Dedsecurity Framework</h1>
+<h1 align="center"> Ded Security Framework</h1>
 
-## Dedsecurity-Framework is a Toolkit.
+## Ded Security Framework is a Toolkit.
 
 ```bash
 Website:  https://www.dedsecurity.com
