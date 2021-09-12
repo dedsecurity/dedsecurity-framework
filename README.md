@@ -2,6 +2,8 @@
 
 <h1 align="center"> Ded Security Framework</h1>
 
+![Screenshot](terminalded.png)
+
 ## Ded Security Framework is a Toolkit.
 
 ```bash
