@@ -84,7 +84,7 @@ deno run --allow-read cat.ts test.txt
 ```bash
 python speciport.py dedsecurity.com
 ```
-
+---
 
 ## Contributing
 Feel free to submitting pull requests to us.
