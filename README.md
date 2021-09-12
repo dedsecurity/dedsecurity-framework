@@ -2,7 +2,7 @@
 
 <h1 align="center"> Ded Security Framework</h1>
 
-![Screenshot](terminalded.png)
+![Screenshot](./public/terminalded.png)
 
 ## Ded Security Framework is a Toolkit.
 
