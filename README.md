@@ -2,15 +2,15 @@
 
 <h1 align="center"> Ded Security Framework</h1>
 
-![Screenshot](./public/terminalded.png)
-
-## Ded Security Framework is a Toolkit.
-
 ```bash
 Website:  https://www.dedsecurity.com
 Author:   Simon Kinjo
 Maintenance:  Simon Kinjo
 ```
+>Ded Security Framework is a tool aimed at security professionals
+---
+
+![Screenshot](./public/terminalded.png)
 
 ## Installation
 
