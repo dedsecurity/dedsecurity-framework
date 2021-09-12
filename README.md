@@ -34,6 +34,8 @@ Clone the [source] with `git`:
 ```bash
 pip install -r requirements.txt
 ```
+---
+
 ```bash
 $ chmod +x install.sh
 $ ./install.sh
