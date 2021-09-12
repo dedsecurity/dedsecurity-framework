@@ -1,7 +1,10 @@
 import os
 import requests
+import base64
 import platform
 import webbrowser
+
+from requests.models import encode_multipart_formdata
 
 
 banner = """
@@ -38,6 +41,9 @@ exploitdb - Google Hacking Database
 login - Pages containing login portals
 ondevice - Online devices
 indexof - Index of a website
+dmarc - Is a standard email authentication method. ... These reports contain information that identifies potential authentication issues and malicious activity in messages sent from your domain.
+dirb - Brute force with multiple mass names and handles their return code identifying whether they are returned or not
+listeningport - listening port to backdoor
 """)
 
 def subdomain():
@@ -129,4 +135,17 @@ while True:
     elif i == "indexof":
         index = input("Website: ")
         webbrowser.open_new_tab(google_hacking + 'intitle: "index of" site:'+index)
+    elif i == "dmarc":
+        dmarc = input("Url: ")
+        os.system("host -t txt _dmarc."+dmarc)
+    elif i == "dirb":
+        urldirb = input("Url: ")
+        os.system("dirb "+urldirb)
+    elif i == "listeningport":
+        ip = input("Ip: ")
+        port = input("Port: ")
+        os.system("sudo nc -l "+ip+" -p "+port+" -v")
+    
+
+
 
