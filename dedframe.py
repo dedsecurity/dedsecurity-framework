@@ -49,6 +49,8 @@ dedsecurity - Ded Security Website
 xss - Xss codes
 reverseshell - Bash reverse shell
 sqlinjection - Sql injection codes
+encode - Base64 Encoder
+decode - Base64 Decoder
 """)
 
 def subdomain():
