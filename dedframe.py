@@ -3,6 +3,7 @@ import requests
 import base64
 import platform
 import webbrowser
+from base64 import urlsafe_b64encode, urlsafe_b64decode
 
 from requests.models import encode_multipart_formdata
 
@@ -77,6 +78,13 @@ def traceroute():
         os.system("traceroute "+t)
     elif platform.system() == 'Windows':
         os.system("tracert "+t)
+
+
+def encode(data):
+    return urlsafe_b64encode(bytes(data, 'utf-8'))
+
+def decode(enc):
+    return urlsafe_b64decode(enc).decode()
 
 print("Type 'help' to show commands.")
 
@@ -266,6 +274,15 @@ while True:
         1 AND (SELECT * FROM Users) = 1 
         ' AND MID(VERSION(),1,1) = '5';
         ' and 1 in (select min(name) from sysobjects where xtype = 'U' and name > '.') --
-        """)    
+        """)
+    elif i == "encode":
+        msg = input("msg: ")
+        encode(msg)
+        print(encode(msg))
+    elif i == "decode":
+        msgde = input("msg: ")
+        decode(msgde)
+        print(decode(msgde))
+
 
 
