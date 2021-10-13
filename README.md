@@ -1,6 +1,6 @@
 <h1 align="center"><img src="./public/logosemfundo.png"></h1>
 
-<h1 align="center"> Ded Security Framework</h1>
+<h1 align="center">Ded Security Framework</h1>
 
 ```bash
 Website:  https://www.dedsecurity.com
