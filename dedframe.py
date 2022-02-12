@@ -14,7 +14,7 @@ banner = """
  @!@  !@! @!!!:!   @!@  !@!       !@@!!  @!!!:!   !@!      @!@  !@! @!@!!@!  !!@   @!!    !@!@! 
  !!:  !!! !!:      !!:  !!!          !:! !!:      :!!      !!:  !!! !!: :!!  !!:   !!:     !!:  
  :: :  :  : :: ::: :: :  :       ::.: :  : :: :::  :: :: :  :.:: :   :   : : :      :      .:   
-                                                                                                
+                     www.dedsecurity.com                                                                                       
 """
 
 print(banner)
@@ -52,6 +52,7 @@ sqlinjection - Sql injection codes
 encode - Base64 Encoder
 decode - Base64 Decoder
 powershellhandy - Powershell handy commands
+webserver - A web server in Python
 """)
 
 def subdomain():
@@ -88,6 +89,12 @@ def encode(data):
 
 def decode(enc):
     return urlsafe_b64decode(enc).decode()
+
+def webserver():
+    if platform.system() == 'Linux':
+        os.system("python3 -m http.server 8080")
+    elif platform.system() == 'Windows':
+        os.system("python -m http.server 8080")
 
 print("Type 'help' to show commands.")
 
@@ -377,6 +384,6 @@ while True:
         # Password reset rights
         Get-ObjectAcl -SamAccountName labuser -ResolveGUIDs -RightsFilter "ResetPassword"
         """)
-
-
-
+    elif i == "webserver":
+        webserver()
+        print("Serving HTTP on :: port 8080")
