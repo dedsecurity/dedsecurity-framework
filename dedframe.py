@@ -1,11 +1,14 @@
+__author__ = 'Simon Kinjo'
+__version__ = '2.3'
+__name__ = 'Ded Security Framework'
+
 import os
 import requests
 import base64
 import platform
 import webbrowser
-from pathlib import Path
+import subprocess
 from base64 import urlsafe_b64encode, urlsafe_b64decode
-
 from requests.models import encode_multipart_formdata
 
 
@@ -20,12 +23,14 @@ banner = """
 
 print(banner)
 
-# exec(open(os.path.join(Path(os.path.abspath(__file__)).parents[2], 'VERSION')).read())
+print(f"\033[33m[{__name__} v{__version__}, {__author__}]\033[m")
 
 google_hacking = 'https://www.google.com/search?q='
 
 def help():
     print("""
+Commands:
+---------------------------------
 help - Displays this menu
 exit - To exit
 clear - Linux
@@ -57,6 +62,7 @@ encode - Base64 Encoder
 decode - Base64 Decoder
 powershellhandy - Powershell handy commands
 webserver - A web server in Python
+shell - Executes shell commands
 """)
 
 def subdomain():
@@ -100,6 +106,11 @@ def webserver():
     elif platform.system() == 'Windows':
         os.system("python -m http.server 8080")
 
+def shell():
+    ishell = input("> ")
+    print("\033[34m[*] \033[mCommand: "+ishell)
+    print(os.popen(ishell).read())
+
 print("Type 'help' to show commands.")
 
 while True:
@@ -109,6 +120,8 @@ while True:
         break
     elif i == "clear":
         os.system("clear")
+    elif i == "shell":
+        shell()
     elif i == "cls":
         os.system("cls")
     elif i == "help":
