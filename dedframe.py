@@ -3,6 +3,7 @@ import requests
 import base64
 import platform
 import webbrowser
+from pathlib import Path
 from base64 import urlsafe_b64encode, urlsafe_b64decode
 
 from requests.models import encode_multipart_formdata
@@ -19,10 +20,13 @@ banner = """
 
 print(banner)
 
+# exec(open(os.path.join(Path(os.path.abspath(__file__)).parents[2], 'VERSION')).read())
+
 google_hacking = 'https://www.google.com/search?q='
 
 def help():
     print("""
+help - Displays this menu
 exit - To exit
 clear - Linux
 cls - Windows 
