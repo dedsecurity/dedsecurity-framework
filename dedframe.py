@@ -63,6 +63,7 @@ decode - Base64 Decoder
 powershellhandy - Powershell handy commands
 webserver - A web server in Python
 shell - Executes shell commands
+pdb - Starts a Python Debugger session (dev only)
 """)
 
 def subdomain():
@@ -110,6 +111,10 @@ def shell():
     ishell = input("> ")
     print("\033[34m[*] \033[mCommand: "+ishell)
     print(os.popen(ishell).read())
+
+def pdb():
+    import pdb
+    pdb.set_trace()
 
 print("Type 'help' to show commands.")
 
@@ -404,3 +409,6 @@ while True:
     elif i == "webserver":
         webserver()
         print("Serving HTTP on :: port 8080")
+    elif i == "pdb":
+        pdb()
+        
