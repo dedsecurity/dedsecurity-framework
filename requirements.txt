@@ -1,2 +1,8 @@
 python-nmap
 requests
+tensorflow
+numpy
+pandas
+nltk
+matplotlib
+scikit-learn

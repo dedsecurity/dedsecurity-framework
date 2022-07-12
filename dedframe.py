@@ -64,6 +64,7 @@ powershellhandy - Powershell handy commands
 webserver - A web server in Python
 shell - Executes shell commands
 pdb - Starts a Python Debugger session (dev only)
+dpc - Real-time semantic code analysis - powered by AI
 """)
 
 def subdomain():
@@ -115,6 +116,13 @@ def shell():
 def pdb():
     import pdb
     pdb.set_trace()
+
+def dpc():
+    import main
+    if platform.system() == 'Linux':
+        os.system("python3 main.py")
+    elif platform.system() == 'Windows':
+        os.system("python main.py")
 
 print("Type 'help' to show commands.")
 
@@ -411,4 +419,6 @@ while True:
         print("Serving HTTP on :: port 8080")
     elif i == "pdb":
         pdb()
+    elif i == "dpc":
+        dpc()
         

