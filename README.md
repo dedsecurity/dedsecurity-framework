@@ -65,6 +65,8 @@ $ ./install.sh
 
 - dedframe.py is the console
 
+- dpc - Real-time semantic code analysis - powered by AI
+
 # Usage remote access
 run remotelinux.py or remotewindows.py and then run in the terminal
 
