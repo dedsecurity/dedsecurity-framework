@@ -24,6 +24,21 @@
           "tag":"lfi",
           "input":["foo.php?file=../../../../../../../etc/passwd", "/example1.php?page=expect://ls", ""],
           "responses":["LFI"]
+        },
+        {
+          "tag":"csrf",
+          "input":["<img src  = “https://examplebuy.com/shop/purchase?productid=5776&amount=2000&address=45%20Main%20Street%20NJ%20NY” width=“0” height= “0”>"],
+          "responses":["CSRF"]
+        },
+        {
+          "tag":"securitymisconfiguration",
+          "input":["DELETE /users/ { 'id':}", "POST /files { 'title':'test.php' 'binary':'BINARY FOR FILE' } "],
+          "responses":["SECURITY MISCONFIGURATION"]
+        },
+        {
+          "tag":"ssrf",
+          "input":["POST /product/stock HTTP/1.0 Content-Type: application/x-www-form-urlencoded Content-Length: 118 stockApi=http://192.168.0.68/admin"],
+          "responses":["SSRF"]
         }
 
     ]
