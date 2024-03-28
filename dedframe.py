@@ -3,6 +3,7 @@ __version__ = '2.3'
 __name__ = 'Ded Security Framework'
 
 import os
+import whois
 import requests
 import base64
 import platform
@@ -124,6 +125,21 @@ def dpc():
     elif platform.system() == 'Windows':
         os.system("python main.py")
 
+def speciport():
+    p = input("Website/Ip: ")
+    if platform.system() == 'Linux':
+        os.system("python3 network/speciport.py "+p)
+    elif platform.system() == 'Windows':
+        os.system("python network/speciport.py "+p)
+    
+def conwhois(dom):
+    try:
+        info = whois.whois(dom)
+        print(info)
+    except Exception as e:
+        print("Error:", e)
+
+
 print("Type 'help' to show commands.")
 
 while True:
@@ -145,24 +161,30 @@ while True:
         info = requests.get(robots)
         print(info.text)
     elif i == "speciport":
-        p = input("Website/ip: ")
-        os.system('python network/speciport.py '+p)# if you use Linux, switch to 'python3 network/speciport.py'
+        speciport()
     elif i == "curl":
         c = input("Website[example:https://google.com]: ")
         os.system('deno run --allow-net network/curl.ts '+c)
     elif i == "banner":
-        os.system('python network/banner_grabbing.py')# if you use Linux, switch to 'python3 network/banner_grabbing.py'
+        if platform.system() == 'Linux':
+            os.system("python3 network/banner_grabbing.py")
+        elif platform.system() == 'Windows':
+            os.system('python network/banner_grabbing.py')
     elif i == "portscan":
-        os.system('python network/scannernmap.py')# if you use Linux, switch to 'python3 network/scannernmap.py'
+        if platform.system() == 'Linux':
+            os.system('python3 network/scannernmap.py')
+        elif platform.system() == 'Windows':
+            os.system('python network/scannernmap.py')
     elif i == "wifi":
-        os.system('python network/wifi.pyw')# if you use Linux, switch to 'python3 network/wifi.pyw'
+        if platform.system() == 'Linux':
+            os.system('python3 network/wifi.pyw')
+        elif platform.system() == 'Windows':
+            os.system('python network/wifi.pyw')
     elif i == "subdomain":
         subdomain()
     elif i == "whois":
-        w = input("Website:")
-        whois = 'https://api.hackertarget.com/whois/?q='+w
-        info = requests.get(whois)
-        print(info.text)
+        domain = input("Website: ")
+        conwhois(domain)
     elif i == "geoip":
         g = input("Website/Ip: ")
         geoip = 'https://api.hackertarget.com/geoip/?q='+g

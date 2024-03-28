@@ -1,4 +1,5 @@
 python-nmap
+python-whois
 requests
 tensorflow
 numpy
